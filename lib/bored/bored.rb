@@ -4,12 +4,12 @@ class GetBored
 
     @@all = []
 
-    attr_accessor :activity, :accessibility, :type
+    attr_accessor :activity
 
     def initialize(activity)
         @activity = activity
-        @accessibility = accessibility
-        @type = type
+        # @accessibility = accessibility
+        # @type = type
         # @participants = participants
         # @price = price
         # @link = link
