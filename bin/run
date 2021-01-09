@@ -1,3 +1,11 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/environment.rb'
+
+#start an instance of your CLI class
+cli = CLI.new
+#invoke start method
+cli.start
+
+#alt: just one line command/cleaner
+#cli = CLI.new.start
