@@ -25,7 +25,6 @@ class CLI
 
     #print random result
     def print_result
-        binding.pry
         GetBored.all
     end
        

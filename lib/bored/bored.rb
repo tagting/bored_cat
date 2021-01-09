@@ -4,25 +4,25 @@ class GetBored
 
     @@all = []
 
-    attr_accessor :activity, :accessibility, :type, :participants, :price, :link, :key
+    attr_accessor :text
 
-    # def initialize(activity, accessibility, type, participants, price, link, key)
+    # def initialize(cat_hash)
     #     @activity = activity
-    #     @accessibility = accessibility
-    #     @type = type
-    #     @participants = participants
-    #     @price = price
-    #     @link = link
-    #     @key = key
+    #     # @accessibility = accessibility
+    #     # @type = type
+    #     # @participants = participants
+    #     # @price = price
+    #     # @link = link
+    #     # @key = key
     #     save
     # end
     
-    def initialize(bored_hash)
-        bored_hash.each do |k, v|
+    def initialize(cat_hash)
+        cat_hash.each do |k, v|
             self.send("#{k}=", v) if self.respond_to?("#{k}=")
         end 
         save
-    end 
+    end   
 
     # def initialize(activity, accessibility, type, participants, price, link, key)
     #     @activity = activity
