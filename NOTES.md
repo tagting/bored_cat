@@ -1,4 +1,4 @@
-USERCASE
+USER CASE
 
 1. Start by welcoming to the app
 2. Ask for name

@@ -6,7 +6,6 @@ class CLI
         puts "Welcome to the Bored App."
         puts "Let's start with your name:"
         API.get_data
-        #binding.pry
         greet(user_input)
     
     end
@@ -18,7 +17,7 @@ class CLI
 
     def greet(name)
         puts "Hi #{name} !" #!!!! regex needed here
-        puts "Inputs 'y' to see the list, 'exit' to leave:" 
+        puts "Would you like a random activity?\n -Yes (y) \n -No (n)" 
         menu
     end
 
