@@ -5,16 +5,29 @@ class CLI
     def start
         puts "Welcome to Bored."
         puts "Let's start with your name:"
+        API.get_data
+
         greet(user_input)
+    
     end
 
     def user_input
         gets.strip
     end
+  
 
     def greet(name)
-        puts "Hi #{name} !"
+        puts "Hi #{name} !" #!!!! regex needed here
         puts "Inputs 'y' to see the list, 'exit' to leave:" 
+        menu
+    end
+
+    def goodbye
+        puts "Hopefully we could help. But bye for now!"
+    end
+
+    def invalid
+        puts "Hmmm, that doesn't seem valid,try again"
         menu
     end
 
@@ -22,11 +35,12 @@ class CLI
         selection = user_input
 
         if selection == 'y'
-            #
-        elsif selction == 'exit'
-            #
+            activity_list
+            menu
+        elsif selection == 'exit'
+            goodbye
         else
-            #invalid output, and make the user select again
+            invalid
         end
     end 
 end

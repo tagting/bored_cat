@@ -17,6 +17,7 @@ class GetBored
         save
     end
 
+
     def save
         @@all <<self
     end
@@ -24,4 +25,9 @@ class GetBored
     def self.all #to read the
         @@all
     end
+
+    #deal with entire class = class method
+    #this is a class method
+    #but if dealing with one object = instance method
+
 end
