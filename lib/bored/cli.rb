@@ -15,6 +15,7 @@ class CLI
     def greet(name)
         puts "Hi #{name} !"
         puts "Inputs 'y' to see the list, 'exit' to leave:" 
+        menu
     end
 
     def menu
