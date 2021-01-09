@@ -30,6 +30,10 @@ class CLI
         puts "Hopefully we could help. But bye for now!"
     end
 
+    def sorrybye
+        puts "Goodbye, sorry we could not help"
+    end
+
     def invalid
         puts "Hmmm, that doesn't seem valid,try again"
         menu
@@ -37,12 +41,12 @@ class CLI
 
     def menu
         selection = user_input
-
         if selection == 'y'
-            activity_list
             menu
         elsif selection == 'exit'
             goodbye
+        elsif selection == 'n'
+            sorrybye
         else
             invalid
         end
