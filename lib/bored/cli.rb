@@ -3,10 +3,10 @@ class CLI
 
     #method to entry point to CLI
     def start
-        puts "Welcome to Bored."
+        puts "Welcome to the Bored App."
         puts "Let's start with your name:"
         API.get_data
-
+        #binding.pry
         greet(user_input)
     
     end
@@ -21,6 +21,11 @@ class CLI
         puts "Inputs 'y' to see the list, 'exit' to leave:" 
         menu
     end
+
+    def result_list #do not need this?
+        #code
+    end
+
 
     def goodbye
         puts "Hopefully we could help. But bye for now!"

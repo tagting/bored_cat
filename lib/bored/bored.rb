@@ -6,14 +6,14 @@ class GetBored
 
     attr_accessor :activity, :accessibility, :type, :participants, :price, :link, :key 
 
-    def initialize(activity, accessibility, type, participants, price, link, key)
+    def initialize(activity)
         @activity = activity
-        @accessibility = accessibility
-        @type = type
-        @participants = participants
-        @price = price
-        @link = link
-        @key = key
+        # @accessibility = accessibility
+        # @type = type
+        # @participants = participants
+        # @price = price
+        # @link = link
+        # @key = key
         save
     end
 
