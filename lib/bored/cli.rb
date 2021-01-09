@@ -6,7 +6,9 @@ class CLI
         puts "Welcome to the Bored App."
         puts "Let's start with your name:"
         API.get_data
+       
         greet(user_input)
+       
     
     end
 
@@ -22,12 +24,17 @@ class CLI
     end
 
     #print random result
-    def activity_result
-        # GetBored.all.each do |key, value|
-        #     puts "#{key}: #{value}"
+    def print_result
+        binding.pry
+        GetBored.all
+    end
+       
+
+    def activity_details
+        # GetBored.all.each do |r|
+        #     puts r.activity
         # end
     end
-
 
     def goodbye
         puts "Hopefully we could help. But bye for now!"
@@ -45,8 +52,7 @@ class CLI
     def menu
         selection = user_input
         if selection == 'y'
-            activity_result
-            menu
+            print_result
         elsif selection == 'exit'
             goodbye
         elsif selection == 'n'
