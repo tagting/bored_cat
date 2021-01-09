@@ -4,30 +4,26 @@ class GetBored
 
     @@all = []
 
-    # attr_accessor :activity
+    attr_accessor :activity, :accessibility, :type
 
-    # # def initialize(activity)
-    # #     @activity = activity
-    # #     @accessibility = accessibility
-    # #     @type = type
-    # #     @participants = participants
-    # #     @price = price
-    # #     @link = link
-    # #     @key = key
-    # #     save
-    # # end
+    def initialize(activity)
+        @activity = activity
+        @accessibility = accessibility
+        @type = type
+        # @participants = participants
+        # @price = price
+        # @link = link
+        # @key = key
+        save
+    end
 
-    # def initialize(starship_hash)
-    #     starship_hash.each do |k, v|
-    # end 
+    def save
+        @@all << self
+    end
 
-    # def save
-    #     @@all << self
-    # end
-
-    # def self.all #to read the
-    #     @@all
-    # end
+    def self.all #to read the
+        @@all
+    end
 
     #deal with entire class = class method
     #this is a class method
