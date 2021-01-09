@@ -25,7 +25,11 @@ class CLI
 
     #print random result
     def print_result
-        GetBored.all
+        GetBored.all.each.with_index(1) do |bored, i|
+            puts ""
+            puts ""
+            puts "Cat Fact: #{i} #{bored.text}"
+        end
     end
        
 
