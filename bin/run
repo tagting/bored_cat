@@ -2,6 +2,7 @@
 
 require_relative '../lib/environment.rb'
 
+API.get_data
 #start an instance of your CLI class
 cli = CLI.new
 #invoke start method

@@ -21,8 +21,11 @@ class CLI
         menu
     end
 
-    def result_list #do not need this?
-        #code
+    #print random result
+    def activity_result
+        # GetBored.all.each do |key, value|
+        #     puts "#{key}: #{value}"
+        # end
     end
 
 
@@ -42,6 +45,7 @@ class CLI
     def menu
         selection = user_input
         if selection == 'y'
+            activity_result
             menu
         elsif selection == 'exit'
             goodbye
