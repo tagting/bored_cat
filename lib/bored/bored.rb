@@ -1,6 +1,6 @@
 #What do you want you object model to look like
 
-class Bored
+class GetBored
 
     @@all = []
 
@@ -21,7 +21,7 @@ class Bored
         @@all <<self
     end
 
-    def self.all #to read the array
+    def self.all #to read the
         @@all
     end
 end

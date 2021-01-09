@@ -1,5 +1,10 @@
 require_relative "./bored/version"
 require 'bundler'
 
+
 Bundler.require
 puts 'in environment'
+
+require_relative "./bored/cli"
+require_relative "./bored/api"
+require_relative "./bored/bored"
