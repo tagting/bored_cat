@@ -3,13 +3,11 @@ class CLI
 
     #method to entry point to CLI
     def start
-        puts "Welcome to the Bored App."
+        puts "Welcome to the App."
         puts "Let's start with your name:"
+        
         API.get_data
-       
         greet(user_input)
-       
-    
     end
 
     def user_input
@@ -19,7 +17,7 @@ class CLI
 
     def greet(name)
         puts "Hi #{name} !" #!!!! regex needed here
-        puts "Would you like a random activity?\n -Yes (y) \n -No (n)" 
+        puts "Would you like a random cat fact?\n -Yes (y) \n -No (n)" 
         menu
     end
 
@@ -33,11 +31,11 @@ class CLI
     end
        
 
-    def activity_details
-        # GetBored.all.each do |r|
-        #     puts r.activity
-        # end
-    end
+    # def activity_details
+    #     # GetBored.all.each do |r|
+    #     #     puts r.activity
+    #     # end
+    # end
 
     def goodbye
         puts "Hopefully we could help. But bye for now!"
@@ -48,7 +46,7 @@ class CLI
     end
 
     def invalid
-        puts "Hmmm, that doesn't seem valid,try again"
+        puts "Hmmm, that doesn't seem valid, try again"
         menu
     end
 
