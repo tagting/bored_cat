@@ -3,8 +3,8 @@ class CLI
 
     #method to entry point to CLI
     def start
-        puts "Welcome to the App."
-        puts "Let's start with your name:"
+        puts "Welcome to the Cat App."
+        puts "Let's start with your name: "
         
         API.get_data
         greet(user_input)
@@ -17,7 +17,7 @@ class CLI
 
     def greet(name)
         puts "Hi #{name} !" #!!!! regex needed here
-        puts "Would you like a random cat fact?\n -Yes (y) \n -No (n)" 
+        puts "Would you like a random cat fact?\n - Yes (y) \n - No (n)" 
         menu
     end
 
@@ -26,7 +26,10 @@ class CLI
         puts " "
         results = GetBored.all.sample
         puts results.text
-
+        puts " "
+        ###
+        puts "Do you want more cat facts?\n - Yes (y) \n - No (n) \n - Exit (exit)"
+        menu
     end
   
        
