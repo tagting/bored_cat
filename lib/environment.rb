@@ -3,7 +3,6 @@ require 'bundler'
 
 
 Bundler.require
-puts 'in environment'
 
 require_relative "./bored/cli"
 require_relative "./bored/api"
