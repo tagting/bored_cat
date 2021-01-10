@@ -4,7 +4,7 @@ class GetBored
 
     @@all = []
 
-    attr_accessor :text
+    attr_accessor :text, :createdAt
 
     
     def initialize(cat_hash)
