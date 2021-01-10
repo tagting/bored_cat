@@ -23,12 +23,12 @@ class CLI
 
     #print random result
     def print_result
-        GetBored.all.each do |bored|
-            puts ""
-            puts ""
-            puts "Cat Fact: #{bored.text}"
-        end
+        puts " "
+        results = GetBored.all.sample
+        puts results.text
+
     end
+  
        
     def goodbye
         puts "Hopefully we could help. But bye for now!"
