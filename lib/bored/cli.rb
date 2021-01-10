@@ -23,20 +23,13 @@ class CLI
 
     #print random result
     def print_result
-        GetBored.all.each.with_index(1) do |bored, i|
+        GetBored.all.each do |bored|
             puts ""
             puts ""
-            puts "Cat Fact: #{i} #{bored.text}"
+            puts "Cat Fact: #{bored.text}"
         end
     end
        
-
-    # def activity_details
-    #     # GetBored.all.each do |r|
-    #     #     puts r.activity
-    #     # end
-    # end
-
     def goodbye
         puts "Hopefully we could help. But bye for now!"
     end
