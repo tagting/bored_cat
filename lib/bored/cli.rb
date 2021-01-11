@@ -24,16 +24,13 @@ class CLI
     #print random result
     def print_result
         puts " "
-        results = GetBored.all.sample
+        binding.pry
+        results = GetBored.all.sample.text
         puts results.text
         puts " "
-        more_options
-       
+        menu
     end
     
-    def more_options
-        puts "options"
-    end
        
     def goodbye
         puts "Hopefully we could help. But bye for now!"
