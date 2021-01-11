@@ -27,11 +27,13 @@ class CLI
         results = GetBored.all.sample
         puts results.text
         puts " "
-        ###
-        puts "Do you want more cat facts?\n - Yes (y) \n - No (n) \n - Exit (exit)"
-        menu
+        more_options
+       
     end
-  
+    
+    def more_options
+        puts "options"
+    end
        
     def goodbye
         puts "Hopefully we could help. But bye for now!"
