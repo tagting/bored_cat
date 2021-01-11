@@ -24,10 +24,10 @@ class CLI
     #print random result
     def print_result
         puts " "
-        binding.pry
-        results = GetBored.all.sample.text
+        results = GetBored.all.sample
         puts results.text
         puts " "
+        puts "Would you like a random cat fact?\n - Yes (y) \n - No (n) \n - Exit (exit)" 
         menu
     end
     
