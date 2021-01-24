@@ -1,8 +1,10 @@
 # responsible for commuincating between user and data 
+require 'pry'
 class CLI
 
     #method to entry point to CLI
     def start
+        @list_facts = []
         puts "Welcome to the Cat App."
         puts "Let's start with your name: "
         
@@ -26,12 +28,21 @@ class CLI
         puts " "
         results = GetBored.all.sample
         puts results.text
+        @list_facts << results
         puts " "
-        puts "Would you like a random cat fact?\n - Yes (y) \n - No (n) \n - Exit (exit)" 
+        puts "Would you like a random cat fact?\n - Yes (y) \n - No (n) \n - Exit (exit) \n - List All (l)" 
         menu
     end
     
-       
+    def list_results
+        # binding.pry
+        @list_facts.each do |l|
+            puts l.text
+        end
+        puts "Would you like a random cat fact?\n - Yes (y) \n - No (n) \n - Exit (exit) \n - List All (l)" 
+        menu        
+    end
+
     def goodbye
         puts "Hopefully we could help. But bye for now!"
     end
@@ -53,6 +64,8 @@ class CLI
             goodbye
         elsif selection == 'n'
             sorrybye
+        elsif selection == 'l'
+            list_results
         else
             invalid
         end
